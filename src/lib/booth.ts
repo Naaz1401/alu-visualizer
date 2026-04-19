@@ -33,7 +33,7 @@ function concatAQ(a: readonly string[], q: readonly string[]): string[] {
 function arithShiftRightAQ(
   a: readonly string[],
   q: readonly string[],
-  qm1: 0 | 1,
+  _qm1: 0 | 1,
   n: number,
 ): { a: string[]; q: string[]; qm1: 0 | 1 } {
   const t = concatAQ(a, q);
@@ -44,7 +44,7 @@ function arithShiftRightAQ(
   return {
     a: newT.slice(0, n),
     q: newT.slice(n, 2 * n),
-    qMinus1: newQm1,
+    qm1: newQm1,
   };
 }
 
@@ -76,7 +76,7 @@ export function buildBoothTrace(multiplicand: number, multiplier: number, n: Bit
     iteration: 0,
     a,
     q,
-    qMinus1: qm1,
+    qm1,
     m,
     decoded: "nop",
     willShift: false,
@@ -97,7 +97,7 @@ export function buildBoothTrace(multiplicand: number, multiplier: number, n: Bit
       iteration: i,
       a,
       q,
-      qMinus1: qm1,
+     qm1,
       m,
       decoded,
       willShift: false,
@@ -115,7 +115,7 @@ export function buildBoothTrace(multiplicand: number, multiplier: number, n: Bit
         iteration: i,
         a,
         q,
-        qMinus1: qm1,
+        qm1,
         m,
         decoded,
         willShift: false,
