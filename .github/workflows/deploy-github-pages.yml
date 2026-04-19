@@ -31,8 +31,7 @@ jobs:
           cache: "npm"
 
       - name: Install dependencies
-        # Prefer committing a `package-lock.json` and switching this to `npm ci` for reproducible CI.
-        run: npm install
+        run: npm ci
 
       - name: Build
         # GITHUB_REPOSITORY is provided by Actions as owner/repo (used by vite.config.ts for `base`).
