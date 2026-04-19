@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+/* Smooth bit cell transitions for highlights and shifts */
+.bit-cell {
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.2s ease;
+}
+
+.bit-cell--shift {
+  transform: translateX(var(--shift-dx, 0px));
+}
+
+.carry-arrow {
+  transition:
+    opacity 0.25s ease,
+    transform 0.3s ease;
+}
