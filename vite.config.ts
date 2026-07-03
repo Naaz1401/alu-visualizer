@@ -1,11 +1,3 @@
-import { defineConfig } from 'vite'
-// ... your other imports
-
-export default defineConfig({
-  base: '/alu-visualizer/', // Add this line right here
-  // ... your existing configurations
-})
-
 
 
 
