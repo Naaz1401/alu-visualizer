@@ -1,3 +1,14 @@
+import { defineConfig } from 'vite'
+// ... your other imports
+
+export default defineConfig({
+  base: '/alu-visualizer/', // Add this line right here
+  // ... your existing configurations
+})
+
+
+
+
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
